@@ -9,3 +9,9 @@
     <p><%= link_to 'Sign up', new_user_registration_path %></p>
     <p><%= link_to 'Login', new_user_session_path %></p>
 <% end %>
+
+<%= raw RQRCode::QRCode.new(current_user.otp_provisioning_uri(current_user.email, issuer: "Devise-Two-Factor-Demo"),
+  :svg,
+  :unit => 2).as_svg 
+%>
+ 
