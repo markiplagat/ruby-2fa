@@ -69,3 +69,5 @@ end
 gem "devise", "~> 4.9"
 
 gem "devise-two-factor", "~> 5.1"
+
+gem 'rqrcode'
